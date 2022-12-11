@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sporty Shoe e-commerce Portal</title>
+
+<!-- Head Links -->
+<div th:replace="includes/headLinks :: headlink"></div> 
+
+<link rel="stylesheet" th:href = "@{/css/adminDashboard.css}">
+<link rel="stylesheet" th:href = "@{/css/modal.css}">
+</head>
+
+<body class="banner-bg">
+	
+	<!-- Header/ Navbar -->
+	<div th:replace="includes/headerAdmin :: headeradmin"></div>
+	
+	
+	<section>
+		<div class="bannerContent ShoeContent">
+			<div class="container ">
+				<h5 style="text-align: center;">Data Deleted Successfully</h5>
+				
+				<span th:each="login : ${aLogin}">
+					<form action="adminDashboard" method="post">
+						<input type="text" name="uname" th:value="${login.username}" hidden>
+                		<input type="text" name="upass" th:value="${login.password}" hidden>
+                		
+                		<button class="btn btn-warning">
+    						<span>Go to Dashboard</span>
+						</button>
+					</form>
+				</span>
+        	</div>    
+    	</div>
+	</section>
+	
+	<!-- Footer -->
+	<div th:replace="includes/footer :: footers"></div>
+	
+	<!-- Head Links -->
+	<div th:replace="includes/tailLinks :: taillink"></div>
+</body>
+
+</html>

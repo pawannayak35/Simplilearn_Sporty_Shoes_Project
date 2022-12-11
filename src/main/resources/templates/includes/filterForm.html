@@ -1,0 +1,35 @@
+<span th:fragment="filterform">
+	<form action="filterPurchaseReport" method="get" class="row g-3 needs-validation" novalidate>
+			
+  		<div class="col-6">
+    		<label for="validationCustom01" class="form-label">Purchase Category</label>
+    		<input type="text" class="form-control" id="validationCustom01" name="category" placeholder="enter category" required>
+    		<div class="valid-feedback">
+      			Looks good!
+    		</div>
+  		</div>
+  		<div class="col-md-6">
+    		<label for="validationCustom02" class="form-label">Purchase Date</label>
+    		<input type="date" class="form-control" id="validationCustom02" name="date" Placeholder="enter date" required>
+    		<div class="valid-feedback">
+      			Looks good!
+    		</div>
+  		</div>
+
+  		<div class="col-12">
+    		<div class="form-check">
+      			<input class="form-check-input" type="checkbox" id="invalidCheck" required>
+      			<label class="form-check-label" for="invalidCheck">
+        			Agree to terms and conditions
+      			</label>
+      			<div class="invalid-feedback">
+        			You must agree before submitting.
+      			</div>
+    		</div>
+  		</div>
+  
+  		<div class="col-12">
+    		<button class="btn btn-outline-dark" type="submit">Filter</button>
+  		</div>
+	</form>
+</span>

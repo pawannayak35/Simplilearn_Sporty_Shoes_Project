@@ -1,0 +1,69 @@
+@charset "ISO-8859-1";
+.banner-bg {
+	background: url("../img/1.jpg") no-repeat;
+  	height: 100vh;
+  	background-size: cover;
+  	background-position: center;
+  	background-attachment: fixed;
+  	box-shadow: inset 0 0 0 2000px #1c1c1c7a;
+  	z-index: 1;
+}  
+.ShoeContent {
+	position: absolute;
+  	color: #fff;
+  	top: 20%;
+  	left: 7%;
+  	width: 85%;
+  	text-align: center;
+}
+
+.shoeDashboardBtn {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+  text-decoration: none;
+  color: red;
+}
+
+.shoeDashboardBtn span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+.shoeDashboardBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.shoeDashboardBtn:hover {
+  color: #fff;
+}
+
+.shoeDashboardBtn:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+/* =================================== footer*/
+.customFooter {
+  position: fixed;
+  right: 15px;
+  bottom: 0;
+  left: 0;
+  /*z-index: 1030;*/
+}

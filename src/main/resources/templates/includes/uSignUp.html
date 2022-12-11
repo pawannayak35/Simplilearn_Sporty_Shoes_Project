@@ -1,0 +1,28 @@
+<span th:fragment="signup">
+	<div class="row">
+		<div class="col">
+			<h5 style="text-align: center;">User Sign Up List</h5>
+			<div class="table-responsive">
+				<table class="table table-dark table-hover">
+					<thead>
+						<tr>
+							<th scope="col">User ID</th>
+							<th scope="col">User Name</th>
+							<th scope="col">User E-mail</th>
+							<th scope="col">User Mobile Number</th>
+
+						</tr>
+					</thead>
+					<tbody class="table-group-divider table-divider-color">
+						<tr th:each="userData : ${usul}">
+							<td scope="row"><span th:text="${userData.uid}"></span></td>
+							<td><span th:text="${userData.username}"></span></td>
+							<td><span th:text="${userData.email}"></span></td>
+							<td><span th:text="${userData.mob}"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br><br><br><br><br><br>
+		</div>
+</span>

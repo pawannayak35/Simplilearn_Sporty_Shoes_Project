@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+@font-face {
+    font-family: "BannerHeading";
+    src: url("../fonts/DancingScript-Bold.ttf");
+}
+
+@font-face {
+	font-family: "BannerButton";
+	src: url("../fonts/Marhey-Regular.ttf");
+}
